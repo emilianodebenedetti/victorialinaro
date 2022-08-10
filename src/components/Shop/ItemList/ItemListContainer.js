@@ -4,28 +4,27 @@ import { useAppContext } from '../../context/AppContext';
 import ItemList from './ItemList';
 
 export const ItemListContainer = () => {
-	const { products } = useAppContext()
+	const { products } = useAppContext() /* products X proyects */
 
-	const [productsCategory, setProductsCategory] = useState([])
+	const [proyectCategory, setProductsCategory] = useState([])
 
-	const { categoryId } = useParams()
+	const { proyectoId } = useParams()
 
 	
 
 	useEffect(() => {
-		!categoryId 
+		!proyectoId 
 			? setProductsCategory(products) 
 			: setProductsCategory(
-				products.filter((product) => product.category === categoryId)
+				products.filter((products) => products.category === proyectoId)
 				)
-	}, [categoryId, products])
+	}, [proyectoId, products])
   
 	
 	return (
 		<>			
-			<div className='divider'>Nuestros productos</div>
-			<ItemList products={productsCategory}/>   
-			
+			<div className='divider'>Mis proyectos</div>
+			<ItemList products={proyectCategory}/>   			
 		</>
 	)
   

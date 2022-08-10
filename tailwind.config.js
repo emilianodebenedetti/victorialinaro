@@ -1,20 +1,29 @@
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{html,js}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'width()' },
+          '50%': { transform: 'rotate(3deg)' },
+        }
+      }
+    },
     colors: {
-      cream:'#fef3c7',
-      orange:'#ff8243',
-      white: '#fffbeb',
-      black: '#686868'
+      white: '#FFFFFF',
+      black: '#686868',
+      transp: '#FFFFFF30',
+      lila: '#9B87E1',
+      lila1: '#625396',
+      grey: '#D6D8C1',
+      grey1: '#c4c4c0'
     }
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+  ],
 }
 
 
-/* colors: {
-      cream:'#fef3c7', /* #fed7aa,  
-      orange:'#fb923c', /* #f97316,  
-      white: '#fffbeb', /* #fef3c7, #fffbeb 
-    } */

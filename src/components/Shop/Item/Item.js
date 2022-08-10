@@ -2,44 +2,23 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 
-
-export const Item = ({ name, price, img, description, id }) => { 
+export const Item = ({ name, img, img1,  id }) => { 
     return (
-        <div className="card col itemListCol mb-2 card  bg-cream shadow-xl">
-        <div className="d-flex justify-content-center align-items-center">
-            <div className="card p-3 w-100">
-                <div className="d-flex justify-content-evenly align-items-center ">
-                    <div className="mt-2">
-                        <h2 className="card-title text-center">{name}</h2>
-                        
-                        <div className="mt-5">
-                            
-                            <h1 className="main-heading mt-0">{description}</h1>
-                        </div>
-                    </div>
-                    <div className="image">
-                    <figure><img width="200" src={img} alt="Shoes" /></figure>
-                    </div>
+       <>
+            <Link to={`/item/${id}`} /* className='grid grid-cols-2 grid-flow-col' */ >
+                <div className="card w-80 bg-grey shadow-xl image-full">{/* borrar card */}
+                                          
+                    <figure className='shadow-xl'>{img1 ? <img src={img1} className='shadow-xl'/> : <img src={img} className='shadow-xl'/> }</figure>
+                    <div className="card-body">
+                        <h2 className="text-center uppercase font-bold italic pt-10">{name}</h2>
+                    </div>                   
                 </div>
-                <div className="">
-                    <div className="col ver-mas mt-4 flex space-x-14">
-                        <Link
-                            to={`/item/${id}`}
-                            className="w-100 btn bg-orange  text-white d-block"  /* cambiar a naranja */
-                        >
-                            Ver mas
-                        </Link>
-                        
-                        <h3 className='card-subtitle'>US$ {price}</h3>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+            </Link>
+       </>
         
     )
 };
 
 export default Item
+
 

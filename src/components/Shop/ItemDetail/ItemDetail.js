@@ -1,40 +1,35 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
-import ItemCount from '../ItemCount/ItemCount';
+import Carousel from './Carousel';
 
 
-
-
-export const ItemDetail = ({ product, terminar, onAdd }) => {
+export const ItemDetail = ({ product }) => {  /* product X proyect */
 	console.log(product)
-	console.log(terminar) 
-	console.log(onAdd)
 
   return (
         <>
 			<div className="bg-cream text-black">
-				<div className="hero-content flex-row lg:flex-row md:flex-row card ">
-					<img src={product.img} className="lg:w-96 md:w-80 w-56  rounded-lg shadow-2xl" alt={`${product.category}`}/>
-					<div>
-						<h2 className="text-3xl lg:text-5xl font-bold pl-6">{product.name}</h2>
-						<p className="py-1 md:py-6 pl-6">'{product.description}'</p>
-						<div className="inline-block align-bottom ">
-							<span className="text-2xl lg:text-3xl leading-none align-baseline pl-6">
-								US$ {product.price}
-							</span>
-							{terminar ? (
-								<>
-									<Link
-										to="/cart"
-										className="btn bg-orange text-white btn-block"
-										>
-										Terminar Compra
-									</Link>
-								</>	
-							) : (
-								<ItemCount product={product} stock={product.stock} onAdd={onAdd} id={product.id} initial={1}/>
-							)}
-						</div>
+				<div className="hero-content grid sm:grid-cols-1 lg:grid-cols-2 flex-row lg:flex-row md:grid-cols-2 ">				
+					<Carousel 
+						img={product.img} 
+						img1={product.img1}
+						img2={product.img2}
+						img3={product.img3}
+						img4={product.img4}
+						img5={product.img5}
+						img6={product.img6}
+						video={product.video}
+					/>		 
+					<div className='lg:pl-20 text-center md:text-left lg:text-left font-medium lg:text-lg md:text-lg' >						
+						<h2 className="text-3xl lg:text-5xl font-bold p-6 pb-10"> {product.name}  </h2>
+						{ product.colaboracion ? <p className="space-y-4 py-1 md:py-2 pl-6">COLABORACIÓN:  {product.colaboracion} </p> : <></>}
+						{ product.diesño ? <p className="space-y-4 py-1 md:py-2 pl-6"> DISEÑO:  {product.diseño} </p> : <></>}			
+						{ product.contenido ? <p className="space-y-4 py-1 md:py-2 pl-6"> CONTENIDO:  {product.contenido} </p> : <></>}
+						{ product.makeup ? <p className="space-y-4 py-1 md:py-2 pl-6"> MAKEUP:  {product.makeup} </p> : <></>}
+						{ product.hair ? <p className="space-y-4 py-1 md:py-2 pl-6"> HAIR:  {product.hair} </p> : <></>}
+						{ product.estilismo ? <p className="space-y-4 py-1 md:py-2 pl-6"> ESTILISMO:  {product.estilismo} </p> : <></>}
+						{ product.modelos ? <p className="space-y-4 py-1 md:py-2 pl-6"> MODELOS:  {product.modelos} </p> : <></>}
+						{ product.produccion ? <p className="space-y-4 py-1 md:py-2 pl-6"> PRODUCCÍON:  {product.produccion} </p> : <></>}
+						{ product.fotografia ? <p className="space-y-4 py-1 md:py-2 pl-6"> FOTOGRAFÍA:  {product.fotografia} </p> : <></>}
+						{ product.locacion ? <p className="space-y-4 py-1 md:py-2 pl-6"> LOCACIÓN:  {product.locacion} </p> : <></>}		
 					</div>
 				</div>
 			</div>

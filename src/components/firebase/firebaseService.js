@@ -10,18 +10,21 @@ import {
   updateDoc, 
 } from "firebase/firestore";
 
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBsfkqk_f4k9c_wKWXSUqkdd0qdYaHa4Rc",
-  authDomain: "entregafinal-react.firebaseapp.com",
-  projectId: "entregafinal-react",
-  storageBucket: "entregafinal-react.appspot.com",
-  messagingSenderId: "413759372781",
-  appId: "1:413759372781:web:27e64d9e9cc920a36dbbe4"
+  apiKey: "AIzaSyBsA_EUXPAEwm4NFqpsaFJ4rBooeUZL0r8",
+  authDomain: "portfolio-victoria.firebaseapp.com",
+  projectId: "portfolio-victoria",
+  storageBucket: "portfolio-victoria.appspot.com",
+  messagingSenderId: "724514931657",
+  appId: "1:724514931657:web:646292b6f79db572215e18"
 };
 
-
-const app = initializeApp(firebaseConfig); 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 
 const db = getFirestore() 
@@ -38,13 +41,13 @@ export const getItem = async(id) => {
     return item
 }
 //Generacion de order
-export const generarOrden = async(orden) => {
+/* export const generarOrden = async(orden) => {
   const newOrder = addDoc(collection(db, "ordenes"), {
     ...orden,
     date: Timestamp.fromDate(new Date())
   })
   return newOrder
-}
+} */
 //Para manejar el stock
 export const actualizarStock = async (itemId, quantity) => {
   const item = await getDoc(doc(db, "items", itemId))

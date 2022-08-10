@@ -5,15 +5,13 @@ export const ItemList = ({ products }) => {
 
   return (
     <>
-      <div className="flex flex-wrap gap-4 justify-center text-black bg-white">{/* cambiar fondo a color crema */}
-        {products.map((product) => (
+      <div className="gap-16 justify-center grid md:grid-rows-2 grid-rows-1 lg:grid-flow-col grid-flow-rows">
+        {products.map((product) => ( 
                 <Item 
                   id={product.id}
                   name={product.name}
-                  stock={product.stock}
-                  desription={product.description}
-                  price={product.price}
                   img={product.img}
+                  img1={product.img1}
                   key={product.id} 
                 />
         ))}
