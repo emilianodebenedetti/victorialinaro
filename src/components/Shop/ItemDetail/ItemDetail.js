@@ -2,7 +2,6 @@ import Carousel from './Carousel';
 
 
 export const ItemDetail = ({ product }) => {  /* product X proyect */
-	console.log(product)
 
   return (
         <>

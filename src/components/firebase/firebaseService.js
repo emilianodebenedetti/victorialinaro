@@ -1,12 +1,10 @@
 import { initializeApp } from "firebase/app";
 import { 
-  addDoc, 
   collection, 
   doc, 
   getDoc, 
   getDocs, 
   getFirestore, 
-  Timestamp,
   updateDoc, 
 } from "firebase/firestore";
 

@@ -1,14 +1,7 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, } from 'react-router-dom';
 import './App.css';
-import About from './components/About/About';
-import Contact from './components/Contact/Contact';
 import AppContextProvider from './components/context/AppContext';
-import Footer from './components/footer/Footer';
 import NavBar from './components/NavBarr/NavBar';
-import ItemDetailContainer from './components/Shop/ItemDetail/ItemDetailContainer';
-import ItemListContainer from './components/Shop/ItemList/ItemListContainer';
-
-
 
 function App() {
   return (
@@ -16,7 +9,7 @@ function App() {
       <AppContextProvider>
           <BrowserRouter>
             <NavBar />
-              <Routes>
+              {/* <Routes>
                 <Route exact path="/" element={<ItemListContainer/>}/>
                 <Route 
                   path="/category/:proyectoId" 
@@ -26,7 +19,7 @@ function App() {
                 <Route path="/about" element={<About/>} />
                 <Route path="/contact" element={<Contact/>} />
               </Routes>
-            <Footer/>
+            <Footer/> */}
           </BrowserRouter>
       </AppContextProvider>
     </>
