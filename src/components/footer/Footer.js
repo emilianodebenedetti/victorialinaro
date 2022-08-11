@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
+
             <footer className="footer footer-center p-10 bg-lila mt-20 flex-end text-white">
+
+
                 <div className="grid grid-flow-col gap-4">
                     <Link to="/" className="link link-hover">Inicio</Link> 
                     <Link to="/about"className="link link-hover">Sobre mi</Link> 
