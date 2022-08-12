@@ -55,7 +55,7 @@ export const Carousel = ({ img1, img2, img3, img4, img5, img6, video  }) => {
           <></>
         }       
         {video ?
-          <SwiperSlide><video src={video} alt='Imagenes proyectos' className='w-96 h-auto' controls></video></SwiperSlide> 
+          <SwiperSlide><video src={video} alt='Imagenes proyectos' className='w-96 h-auto' controls poster='https://firebasestorage.googleapis.com/v0/b/portfolio-victoria.appspot.com/o/Connection%201.5%2Fportada.jpg?alt=media&token=dd1cae05-f58d-4974-bd65-457c96085a06'></video></SwiperSlide> 
           :
           <></>
         } 
