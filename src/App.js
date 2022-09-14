@@ -3,6 +3,7 @@ import './App.css';
 import AppContextProvider from './components/context/AppContext';
 import NavBar from './components/NavBarr/NavBar';
 
+
 function App() {
   return (
     <>
