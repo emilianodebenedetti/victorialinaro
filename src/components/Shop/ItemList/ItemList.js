@@ -5,7 +5,7 @@ export const ItemList = ({ products }) => {
 
   return (
     <>
-      <div className="gap-16 justify-center grid md:grid-rows-2 grid-rows-1 lg:grid-flow-col grid-flow-rows ">
+      <div className="gap-16 justify-center grid md:grid-rows-2 grid-rows-1 lg:grid-flow-col grid-flow-rows">
         {products.map((product) => ( 
                 <Item 
                   id={product.id}

@@ -1,7 +1,7 @@
-
 body {
-  margin: 0;
-    font-family: 'Gloria Hallelujah', cursive;
+    /* font-family: 'EB Garamond', serif; */
+    font-family: 'Abril Fatface', cursive;
+/* 'Gloria Hallelujah', cursive; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color:#d6d9c1
@@ -10,4 +10,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+/*     font-family: 'EB Garamond', serif; */
+
 }

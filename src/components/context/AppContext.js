@@ -13,12 +13,12 @@ const AppContextProvider = ({ children }) => {
     getItems()
       .then((res) => 
         res.docs.forEach((doc) => {
-          firestoreProducts.push({ ... doc.data(), id: doc.id, })                        //.data para traducir la info de firebase
+          firestoreProducts.push({ ...doc.data(), id: doc.id, })                        //.data para traducir la info de firebase
         })
       )
       .then(() => setProducts(firestoreProducts)) 
   }, [])
-  console.log(products)
+ /*  console.log(products) */
     
   return (
     <AppContext.Provider 

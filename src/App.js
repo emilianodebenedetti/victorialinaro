@@ -1,4 +1,4 @@
-import { BrowserRouter, } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import AppContextProvider from './components/context/AppContext';
 import NavBar from './components/NavBarr/NavBar';
@@ -19,8 +19,8 @@ function App() {
                 <Route path="/item/:id" element={<ItemDetailContainer/>} />
                 <Route path="/about" element={<About/>} />
                 <Route path="/contact" element={<Contact/>} />
-              </Routes>
-            <Footer/> */}
+              </Routes>*/}
+            {/* <Footer/> */} 
           </BrowserRouter>
       </AppContextProvider>
     </>
