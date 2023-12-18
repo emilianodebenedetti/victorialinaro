@@ -1,7 +1,8 @@
 body {
-    /* font-family: 'EB Garamond', serif; */
-    font-family: 'Abril Fatface', cursive;
-/* 'Gloria Hallelujah', cursive; */
+  /* font-family: 'EB Garamond', serif; */
+  font-family: 'Abril Fatface', cursive;
+  font-family: 'Architects Daughter', cursive;
+  /* 'Gloria Hallelujah', cursive; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color:#d6d9c1

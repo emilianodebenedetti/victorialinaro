@@ -5,7 +5,7 @@ export const ItemDetail = ({ product }) => {  /* product X proyect */
 
   return (
         <>
-			<div className="bg-cream text-black">
+			<div className="bg-cream text-black ">
 				<div className="hero-content grid sm:grid-cols-1 lg:grid-cols-2 flex-row lg:flex-row md:grid-cols-2 ">				
 					<Carousel 
 						img={product.img} 

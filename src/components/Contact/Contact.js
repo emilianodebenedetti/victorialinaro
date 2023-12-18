@@ -6,14 +6,14 @@ const Contact = () => {
 	const sendEmail = (event) => {
 		event.preventDefault();
 
-		emailjs.sendForm('default_service', 'template_vhy26ge', '#form', '-x4thOHgvspSzXeeB') /* 1: id emailjs service,2: template id del msg, 3:datos del form, 4: userId, de api keys  */
+		emailjs.sendForm('default_service', 'template_c4gk52s', '#form', '-x4thOHgvspSzXeeB')
 		.then(response => console.log(response))
 		.catch(error => console.log(error))
 	}
 
   return (
     <>
-      <div className="md:mx-20 lg:mx-40 mt-8 flex flex-col justify-center phone-3 bg-grey1 shadow-lg rounded-2xl">{/* cambiar a beige */}
+      <div className="md:mx-20 lg:mx-40 mt-8 flex flex-col justify-center phone-3 bg-grey1 shadow-lg rounded-2xl">
 		<h2 className='text-center text-black text-xl p-10'>Llena el formulario para contactarme!</h2>
 		<form
 			id='form'
@@ -36,7 +36,7 @@ const Contact = () => {
 				type="message" 
 				placeholder="Deja tu mensaje!" 
 				name="message"
-				className="w-full mx-auto mb-2 text-center input input-bordered input-lila w-full max-w-xl bg-white" 
+				className="w-full mx-auto mb-2 text-center input input-bordered input-lila w-full max-w-xl bg-white text-black" 
 			/>									
 			<button type="submit"  className="mx-auto w-full btn d-block mt-2 bg-lila hover:bg-lila1 text-white max-w-xl border-none">
 				Enviar mensaje

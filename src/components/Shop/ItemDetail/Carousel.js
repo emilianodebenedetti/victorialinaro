@@ -1,8 +1,8 @@
 import React from 'react'
-import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from 'swiper';
-  // import Swiper and modules styles
+  
+// import Swiper and modules styles
   import 'swiper/css';
   import 'swiper/css/navigation';
   import 'swiper/css/pagination';
@@ -14,7 +14,7 @@ export const Carousel = ({ img1, img2, img3, img4, img5, img6, video  }) => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -22,35 +22,35 @@ export const Carousel = ({ img1, img2, img3, img4, img5, img6, video  }) => {
         }}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper max-w-md bg-grey h-fit w-96"
+        className="mySwiper bg-grey w-96 image-full h-full rounded"
       >
         {img1 ?
-          <SwiperSlide><img src={img1} alt='Imagenes proyectos'></img></SwiperSlide> 
+          <SwiperSlide><img src={img1} alt='Imagenes proyectos' className='h-full max-h-cover '></img></SwiperSlide> 
           :
           <></>
         }
         {img2 ?
-          <SwiperSlide><img src={img2} alt='Imagenes proyectos'></img></SwiperSlide> 
+          <SwiperSlide><img src={img2} alt='Imagenes proyectos' className='h-full max-h-cover'></img></SwiperSlide> 
           :
           <></>
         }
         {img3 ?
-          <SwiperSlide><img src={img3} alt='Imagenes proyectos'></img></SwiperSlide> 
+          <SwiperSlide><img src={img3} alt='Imagenes proyectos' className='h-full max-h-cover'></img></SwiperSlide> 
           :
           <></>
         }
         {img4 ?
-          <SwiperSlide><img src={img4} alt='Imagenes proyectos'></img></SwiperSlide> 
+          <SwiperSlide><img src={img4} alt='Imagenes proyectos' className='h-full max-h-cover'></img></SwiperSlide> 
           :
           <></>
         }
         {img5 ?
-          <SwiperSlide><img src={img5} alt='Imagenes proyectos'></img></SwiperSlide> 
+          <SwiperSlide><img src={img5} alt='Imagenes proyectos' className='h-full max-h-cover'></img></SwiperSlide> 
           :
           <></>
         }
         {img6 ?
-          <SwiperSlide><img src={img6} alt='Imagenes proyectos'></img></SwiperSlide> 
+          <SwiperSlide><img src={img6} alt='Imagenes proyectos' className='h-full max-h-cover'></img></SwiperSlide> 
           :
           <></>
         }       

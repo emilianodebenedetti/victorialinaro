@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useAppContext } from '../../context/AppContext'
@@ -8,7 +7,7 @@ import  ItemDetail  from './ItemDetail'
 export const ItemDetailContainer = () => {
   
     const { products } = useAppContext()
-	const [  productSelected, setProductSelected ] = useState({})
+	const [ productSelected, setProductSelected ] = useState({})
 	const { id } = useParams()
 
 	useEffect(() => {
