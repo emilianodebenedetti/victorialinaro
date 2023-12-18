@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './App.css';
 import AppContextProvider from './components/context/AppContext';
 import NavBar from './components/NavBarr/NavBar';
@@ -58,9 +59,9 @@ export default App;
       <div className="form-control ">
         <input type="text" placeholder="Buscar" className="input input-bordered w-36 md:w-auto" />
       </div>
-      <div className="dropdown dropdown-end text-white"> 
+      {/* <div className="dropdown dropdown-end text-white"> 
         <CartWidget/>      
-      </div>
+      </div> */}
     </div>
   </div>
   </>
